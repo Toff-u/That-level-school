@@ -1,0 +1,121 @@
+[gd_scene load_steps=19 format=3 uid="uid://d30gakkm0qlng"]
+
+[ext_resource type="Script" path="res://boy.gd" id="1_fyf4u"]
+[ext_resource type="Texture2D" uid="uid://mlccos1cyxap" path="res://sprites/boy/test_boy1.png" id="1_igjuq"]
+[ext_resource type="Texture2D" uid="uid://baftsfju4ijyh" path="res://sprites/boy/test_boy2.png" id="2_bdhx7"]
+[ext_resource type="Texture2D" uid="uid://8v4jo5dktx8" path="res://sprites/fight/boy/test_fight1.png" id="2_p56h7"]
+[ext_resource type="Texture2D" uid="uid://u8bmbku4d64h" path="res://sprites/fight/boy/test_fight2.png" id="3_0xxdm"]
+[ext_resource type="Texture2D" uid="uid://c44tpdsn6ocdc" path="res://sprites/boy/test_boy3.png" id="3_coxsf"]
+[ext_resource type="Texture2D" uid="uid://byhjxtp075mtb" path="res://sprites/fight/boy/test_fight3.png" id="4_dyfry"]
+[ext_resource type="Texture2D" uid="uid://c5qpqn1xldq7p" path="res://sprites/boy/test_boy4.png" id="4_kuiim"]
+[ext_resource type="Texture2D" uid="uid://dxkrcl8dlrkme" path="res://sprites/fight/boy/test_fight4.png" id="5_qyeep"]
+[ext_resource type="Texture2D" uid="uid://en7i6h740r1n" path="res://sprites/boy/test_defeat_boy1.png" id="6_kplax"]
+[ext_resource type="Texture2D" uid="uid://cyonuvwa475ux" path="res://sprites/boy/test_defeat_boy2.png" id="7_0p7r3"]
+[ext_resource type="Texture2D" uid="uid://c073fxltx7fbw" path="res://sprites/boy/test_walk_boy1.png" id="10_blkw3"]
+[ext_resource type="Texture2D" uid="uid://cl8tbkrgcqup0" path="res://sprites/boy/test_walk_boy2.png" id="11_ggc70"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l0oym"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_p56h7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0xxdm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dyfry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qyeep")
+}],
+"loop": true,
+"name": &"fight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_kplax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0p7r3")
+}],
+"loop": false,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_igjuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bdhx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_coxsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kuiim")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_blkw3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ggc70")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xehkq"]
+radius = 13.0
+height = 40.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dyb3y"]
+radius = 78.0256
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u73jg"]
+size = Vector2(13, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a34h4"]
+size = Vector2(30, 19)
+
+[node name="boy" type="CharacterBody2D"]
+script = ExtResource("1_fyf4u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -1)
+scale = Vector2(0.444336, 0.435547)
+sprite_frames = SubResource("SpriteFrames_l0oym")
+animation = &"hurt"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_xehkq")
+
+[node name="detect" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detect"]
+shape = SubResource("CircleShape2D_dyb3y")
+
+[node name="death" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death"]
+position = Vector2(-1.5, -19)
+shape = SubResource("RectangleShape2D_u73jg")
+
+[node name="death2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death2"]
+shape = SubResource("RectangleShape2D_a34h4")
+
+[connection signal="body_entered" from="detect" to="." method="_on_detect_body_entered"]
+[connection signal="body_exited" from="detect" to="." method="_on_detect_body_exited"]
+[connection signal="body_entered" from="death" to="." method="_on_death_body_entered"]
+[connection signal="body_entered" from="death2" to="." method="_on_death_2_body_entered"]

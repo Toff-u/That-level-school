@@ -1,0 +1,182 @@
+[gd_scene load_steps=11 format=3 uid="uid://dx0q86vicgrs0"]
+
+[ext_resource type="Texture2D" uid="uid://w3u4g86uwne8" path="res://sprites/School background/background_layer_1.png" id="1_g7nhs"]
+[ext_resource type="Texture2D" uid="uid://pqq4xh8wycnn" path="res://sprites/School background/background_layer_2.png" id="2_gs6as"]
+[ext_resource type="PackedScene" uid="uid://bcio1bgi83jv2" path="res://Player/player.tscn" id="2_sfuyf"]
+[ext_resource type="Texture2D" uid="uid://tklopj7rmgqi" path="res://sprites/School background/background_layer_3.png" id="3_k7d5u"]
+[ext_resource type="Texture2D" uid="uid://cufhokwtapkj2" path="res://sprites/background_layer_4.png" id="5_ctawg"]
+[ext_resource type="PackedScene" uid="uid://d30gakkm0qlng" path="res://boy.tscn" id="6_ffuwi"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5c4rg"]
+texture = ExtResource("5_ctawg")
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:3/0 = 0
+8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:3/0 = 0
+9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:3/0 = 0
+10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:3/0 = 0
+11:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:3/0 = 0
+12:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:3/0 = 0
+13:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:3/0 = 0
+14:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:3/0 = 0
+15:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+16:3/0 = 0
+16:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:3/0 = 0
+17:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:3/0 = 0
+18:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:3/0 = 0
+19:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:2/0 = 0
+18:2/0 = 0
+17:2/0 = 0
+16:2/0 = 0
+15:2/0 = 0
+14:2/0 = 0
+13:2/0 = 0
+12:2/0 = 0
+11:2/0 = 0
+10:2/0 = 0
+9:2/0 = 0
+8:2/0 = 0
+7:2/0 = 0
+6:2/0 = 0
+5:2/0 = 0
+4:2/0 = 0
+3:2/0 = 0
+2:2/0 = 0
+1:2/0 = 0
+0:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_uejdq"]
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_5c4rg")
+
+[sub_resource type="GDScript" id="GDScript_t7mbi"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	func _process(delta: float) -> void:
+	text = \"Mob HP: \" + str($\"../../Boy/boy\".health)
+"
+
+[sub_resource type="GDScript" id="GDScript_4xbr4"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	text = \"HP: \" + str($\"../../Player/Player\".health)
+"
+
+[node name="level1" type="Node2D"]
+
+[node name="BG school" type="ParallaxBackground" parent="."]
+
+[node name="1" type="ParallaxLayer" parent="BG school"]
+
+[node name="BackgroundLayer1" type="Sprite2D" parent="BG school/1"]
+position = Vector2(203.911, 74.4351)
+scale = Vector2(1.2693, 1.63189)
+texture = ExtResource("1_g7nhs")
+
+[node name="2" type="ParallaxLayer" parent="BG school"]
+
+[node name="BackgroundLayer2" type="Sprite2D" parent="BG school/2"]
+position = Vector2(203.448, 78)
+scale = Vector2(1.26595, 1.37778)
+texture = ExtResource("2_gs6as")
+
+[node name="4" type="ParallaxLayer" parent="BG school"]
+
+[node name="BackgroundLayer3" type="Sprite2D" parent="BG school/4"]
+position = Vector2(166, 94)
+scale = Vector2(0.960015, 1.07883)
+texture = ExtResource("3_k7d5u")
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(16, 41)
+
+[node name="Player" parent="Player" instance=ExtResource("2_sfuyf")]
+position = Vector2(13, 63)
+
+[node name="Boy" type="Node2D" parent="."]
+position = Vector2(24, 61)
+
+[node name="boy" parent="Boy" instance=ExtResource("6_ffuwi")]
+position = Vector2(314, 42)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_uejdq")
+format = 2
+layer_0/tile_data = PackedInt32Array(393241, 1114114, 3, 65535, 196610, 3, 131071, 196610, 3, 196607, 196610, 3, 262143, 196610, 3, 327679, 196610, 3, 393215, 196610, 3, 458751, 196610, 3, 25, 196610, 3, 65561, 196610, 3, 131097, 196610, 3, 196633, 196610, 3, 262169, 196610, 3, 327705, 196610, 3, 524288, 131074, 3, 524289, 196610, 3, 524290, 262146, 3, 524291, 327682, 3, 524292, 393218, 3, 524293, 458754, 3, 524294, 524290, 3, 524295, 589826, 3, 524296, 655362, 3, 524297, 131074, 3, 524298, 196610, 3, 524299, 262146, 3, 524300, 327682, 3, 524301, 393218, 3, 524302, 458754, 3, 524303, 524290, 3, 524304, 589826, 3, 524305, 655362, 3, 524306, 720898, 3, 524307, 786434, 3, 524308, 851970, 3, 524309, 917506, 3, 524310, 983042, 3, 524311, 1048578, 3, 524312, 1114114, 3, 524287, 196610, 3, 458777, 196610, 3)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = 3.0
+offset_top = 20.0
+offset_right = 43.0
+offset_bottom = 43.0
+script = SubResource("GDScript_t7mbi")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 3.0
+offset_right = 29.0
+offset_bottom = 23.0
+text = "Hp"
+script = SubResource("GDScript_4xbr4")

@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dk777ojsfenbt"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_kg0lf"]
+[ext_resource type="Texture2D" uid="uid://c5ova5rimsdst" path="res://photo_5431355229967877042_y.jpg" id="1_sa3nd"]
+
+[node name="menu" type="Node2D"]
+script = ExtResource("1_kg0lf")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 80.0
+offset_top = 167.0
+offset_right = 415.0
+offset_bottom = 280.0
+theme_override_font_sizes/font_size = 50
+text = "PLAY"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 83.0
+offset_top = 341.0
+offset_right = 411.0
+offset_bottom = 442.0
+theme_override_font_sizes/font_size = 50
+text = "QUIT"
+
+[node name="Photo5431355229967877042Y" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(577, 330)
+scale = Vector2(0.906494, 0.927275)
+texture = ExtResource("1_sa3nd")
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
